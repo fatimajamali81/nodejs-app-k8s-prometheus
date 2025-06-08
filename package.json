@@ -1,0 +1,13 @@
+{
+  "name": "gandalf-app",
+  "version": "1.0.0",
+  "description": "Gandalf and Colombo time app - also shows metrics for clicking on any of those routes",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "prom-client": "^14.2.0"
+  }
+}
