@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gandalf-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gandalf-app
+  template:
+    metadata:
+      labels:
+        app: gandalf-app
+    spec:
+      containers:
+      - name: gandalf-app
+        image: gandalf-app:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gandalf-service
+spec:
+  selector:
+    app: gandalf-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
