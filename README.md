@@ -136,4 +136,4 @@ You’ll see how many times each route has been used.
 
 ## License
 
-This project uses the MIT license.
+This project doesn't use any license.
